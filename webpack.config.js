@@ -12,7 +12,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist', //打包后的文件存放的地方
         filename: '[name].js', //打包后输出文件的文件名
-        publicPath: '/dist/'
+        publicPath: '/SN-Animation/dist/'
     },
 
     module: {
