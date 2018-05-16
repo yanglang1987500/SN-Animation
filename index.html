@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+        }
+        body{
+            background: #666;
+        }
+        #container{
+            pointer-events: none;
+            background: #000;
+            border: 1px solid #ddd;
+            position: fixed;
+            left:0 ;
+            top:50px;
+            height:calc(100vh - 200px);
+            width:99%;
+            box-shadow: 0 2px 5px rgba(0,0,0,.5);
+        }
+        #container.gif {
+          left: 200px;
+          top: 200px;
+          width: 578px;
+          height: 143px;
+        }
+    </style>
+</head>
+<body>
+  <div id="container" class="gif"></div>
+  <script type="text/javascript" src="./dist/snanimation.js"></script>
+  <script type="text/javascript" src="./dist/index.js"></script>
+  <script>
+    window.con = document.getElementById('container');
+    Animations.init(window.con);
+    
+  </script>
+<button onclick="Animations.clear();Animations.ani_zhuang2.run(180, 0);">测试庄家动画</button>
+<button onclick="Animations.clear();Animations.ani_start.run(100, 50);">测试开始动画</button>
+<button onclick="Animations.clear();Animations.ani_plane1.run(-120,20);">测试飞机1动画</button>
+<button onclick="Animations.clear();Animations.ani_plane2.run(700,20);">测试飞机2动画</button>
+<button onclick="Animations.clear();Animations.ani_plane3.run(180,20);">测试飞机3动画</button>
+<button onclick="Animations.clear();Animations.ani_win.run(30, -180);">测试胜利动画</button>
+<button onclick="Animations.clear();Animations.ani_lose.run(120, -70);">测试失败动画</button>
+<button onclick="Animations.clear();Animations.ani_beauity.run(-50,0);">测试小人动画</button>
+<button onclick="Animations.clear();Animations.gif.run();">测试小飞机加载动画</button>
+
+
+
+
+</body>
+</html>
