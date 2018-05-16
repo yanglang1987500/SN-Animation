@@ -1,1 +1,7 @@
-基于React+Webpack+ES6的前端项目模版目录
+# snanimation
+canvas 动画库
+
+一个基于Canvas的动画库，主要使用多帧精灵图以及修改精灵显示属性实现动画
+
+
+ <a href="https://yanglang1987500.github.io/SN-Animation/index.html">查看demo</a>
