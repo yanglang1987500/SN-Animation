@@ -31,7 +31,7 @@ const PubSub = {
         scope: this,
       });
     }
-    if (eventName.startsWith(`${EVENT_PREFIX}_`)) { this.unsubscribe(eventName); }
+    if (new RegExp("^" + EVENT_PREFIX + ".*$").test(eventName)) { this.unsubscribe(eventName); }
     return this;
   },
   /*

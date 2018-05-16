@@ -790,9 +790,9 @@
 	 * @date 20170830
 	 */
 
-	'use strict';
+	"use strict";
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	var Events = {};
@@ -824,7 +824,7 @@
 	        scope: this
 	      });
 	    }
-	    if (eventName.startsWith(EVENT_PREFIX + '_')) {
+	    if (new RegExp("^" + EVENT_PREFIX + ".*$").test(eventName)) {
 	      this.unsubscribe(eventName);
 	    }
 	    return this;
@@ -940,7 +940,7 @@
 	  call: function call(api, data, alive) {
 	    var eventName = '';
 	    if (data.callback) {
-	      eventName = !alive ? EVENT_PREFIX + '_' + this.guid() : api;
+	      eventName = !alive ? EVENT_PREFIX + "_" + this.guid() : api;
 	      this.subscribe(eventName, data.callback);
 	    }
 	    var messageObj = {
@@ -961,8 +961,8 @@
 	  }
 	};
 
-	exports['default'] = PubSub;
-	module.exports = exports['default'];
+	exports["default"] = PubSub;
+	module.exports = exports["default"];
 
 /***/ }),
 /* 3 */
